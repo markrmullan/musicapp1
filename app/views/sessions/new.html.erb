@@ -1,0 +1,19 @@
+<h1>Log in to view your music</h1>
+
+<br><br>
+
+<form action="/session" method="post">
+  <input type="hidden" name="authenticity_token" value="form_authenticity_token">
+  <label for="session_email">Email Address: </label>
+  <input type="text" name="session[email]" id="session_email">
+
+<br><br>
+
+  <label for="session_password">Password: </label>
+  <input type="password" name="session[password]" id="session_password">
+
+<br><br>
+
+  <input type="submit" value="Log in">
+
+</form>

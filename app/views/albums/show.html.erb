@@ -1,0 +1,16 @@
+<h1><%= @album.name %> by <%= @album.band.name %> </h1>
+
+Track List:
+<ul>
+<% @album.tracks.each do |track| %>
+<li><%= link_to "#{track.title}", track_url(track) %></li>
+<% end %>
+</ul>
+
+<br><br>
+
+<%= button_to "Edit album", edit_album_url(@album.id), method: "get"  %>
+<br>
+<%= button_to "Delete album", ("/albums/#{@album.id}"), method: "delete"  %>
+<br>
+<%= button_to "View this artist's page", ("/bands/#{@album.band_id}"), method: "get" %>

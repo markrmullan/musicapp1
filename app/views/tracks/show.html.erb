@@ -1,0 +1,10 @@
+<h1><%= @track.title %> by <%= @track.album.band.name %>  </h1>
+
+Lyrics:
+<p><i> <%= @track.lyrics %> </i></p>
+
+<%= button_to "Edit track", edit_track_url(@track.id), method: "get"  %>
+<br>
+<%= button_to "Delete track", ("/tracks/#{@track.id}"), method: "delete"  %>
+<br>
+<%= button_to "View the entire album", ("/albums/#{@track.album_id}"), method: "get" %>
